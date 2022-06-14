@@ -1,0 +1,10 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy_right_p{
+    margin: 2px 0;
+}

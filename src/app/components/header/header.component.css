@@ -1,0 +1,18 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_header_ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    list-style-type: none;
+}
+
+.menu_header_li{
+    text-decoration-line: none;
+}
