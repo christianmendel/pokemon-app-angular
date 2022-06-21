@@ -1,8 +1,10 @@
 <p>home works!</p>
 <ul class="menu_pokemon_ul">
   <li *ngFor="let pokemon of pokemons; index as i" class="menu_pokemon_li">
-    <p>{{ pokemon.name }}</p>
-    <img [src]="mostrarPokemonImg(i + 1)" alt="" />
-    <button (click)="mostrarDetalhes(i + 1)">Detalhar</button>
+    <img [src]="mostrarPokemonImg(i+1)" alt="" />
+    <button (click)="mostrarDetalhes(i + 1)"
+    [disabled]="detail">Detalhar</button>
+    <p>{{pokemon.name}}</p>
   </li>
 </ul>
+

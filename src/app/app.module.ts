@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HomeComponent} from './screens/home/home.component'
 import { SobreComponent } from './screens/sobre/sobre.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonDetalhesComponent } from './screens/pokemon-detalhes/pokemon-detalhes.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SobreComponent
+    SobreComponent,
+    PokemonDetalhesComponent
   ],
   imports: [
     BrowserModule,

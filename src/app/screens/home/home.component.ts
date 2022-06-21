@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
@@ -9,8 +10,10 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 export class HomeComponent implements OnInit {
   public pokemons: any = [];
   public pokemon: any;
+  public detail:boolean = false;
 
-  constructor(private pokemonService: PokemonService) {}
+
+  constructor(private pokemonService: PokemonService, private router: Router) {}
 
   ngOnInit(): void {
     this.listarPokemons()
@@ -23,14 +26,10 @@ export class HomeComponent implements OnInit {
   }
 
   public mostrarDetalhes(id:number) {
-    return this.pokemonService.listarPokemon(id).subscribe((res) => {
-      return (this.pokemon = res);
-    });
+    this.router.navigate([`pokemon/${id}`])
   }
 
   public mostrarPokemonImg(id:number){
-    return this.pokemonService.listarPokemonImg(id).subscribe((res) => {
-      return res
-    });
+    return `https://cdn.traction.one/pokedex/pokemon/${id}.png`
   }
 }
