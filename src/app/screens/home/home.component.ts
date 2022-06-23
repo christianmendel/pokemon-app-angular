@@ -1,35 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PokemonService } from 'src/app/services/pokemon.service';
+import { PokemonService } from 'src/app/service/pokemon.service';
 
 @Component({
-  selector: 'home-screen',
+  selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public pokemons: any = [];
-  public pokemon: any;
-  public detail:boolean = false;
+  public pokemons: any = []
 
 
-  constructor(private pokemonService: PokemonService, private router: Router) {}
+  constructor(private pokemonService: PokemonService, private router: Router) { }
 
   ngOnInit(): void {
     this.listarPokemons()
   }
 
-  public listarPokemons() {
-    return this.pokemonService.listarPokemons().subscribe((res) => {
-      return (this.pokemons = res.results);
-    });
+  public listarPokemons(){
+    this.pokemonService.listarPokemons().subscribe(res=>{
+      console.log(res)
+      return this.pokemons = res
+    })
   }
 
-  public mostrarDetalhes(id:number) {
-    this.router.navigate([`pokemon/${id}`])
-  }
-
-  public mostrarPokemonImg(id:number){
+  public listarImgPokemon(id: number){
     return `https://cdn.traction.one/pokedex/pokemon/${id}.png`
+  }
+
+
+  public mostrarDetalhes(id:number){
+    return this.router.navigate([`pokemon/${id}`])
   }
 }

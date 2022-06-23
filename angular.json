@@ -1,18 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "36eb148c-3aab-4055-8c90-78c59ee265d8"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pokemon-project": {
+    "pokemon": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pokemon-project",
+            "outputPath": "dist/pokemon",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pokemon-project:build:production"
+              "browserTarget": "pokemon:build:production"
             },
             "development": {
-              "browserTarget": "pokemon-project:build:development"
+              "browserTarget": "pokemon:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pokemon-project:build"
+            "browserTarget": "pokemon:build"
           }
         },
         "test": {
@@ -105,5 +98,7 @@
       }
     }
   },
-  "defaultProject": "pokemon-project"
+  "cli": {
+    "analytics": false
+  }
 }

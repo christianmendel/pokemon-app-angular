@@ -1,0 +1,14 @@
+<section>
+  <div>
+    <img [src]="pokemonImg" alt="" />
+    <h2>Nome: {{ pokemon?.name | uppercase }}</h2>
+    <h3>Altura: {{ pokemon?.height }}</h3>
+    <ul>
+        <h3>Abilidades:</h3>
+      <li *ngFor="let abilidade of pokemon?.abilities">
+        <p>{{ abilidade.ability.name }}</p>
+      </li>
+    </ul>
+    <button (click)="voltar()">Voltar</button>
+  </div>
+</section>

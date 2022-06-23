@@ -1,10 +1,9 @@
-<p>home works!</p>
-<ul class="menu_pokemon_ul">
-  <li *ngFor="let pokemon of pokemons; index as i" class="menu_pokemon_li">
-    <img [src]="mostrarPokemonImg(i+1)" alt="" />
-    <button (click)="mostrarDetalhes(i + 1)"
-    [disabled]="detail">Detalhar</button>
-    <p>{{pokemon.name}}</p>
-  </li>
-</ul>
-
+<section>
+  <ul>
+    <li *ngFor="let pokemon of pokemons.results; index as i">
+      <p>{{ pokemon.name | uppercase}}</p>
+      <img [src]="listarImgPokemon(i + 1)" alt="" class="img_pokemon" />
+      <button (click)="mostrarDetalhes(i+1)">Detalhar</button>
+    </li>
+  </ul>
+</section>

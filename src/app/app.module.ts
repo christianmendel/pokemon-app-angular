@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import {HomeComponent} from './screens/home/home.component'
+import { HomeComponent } from './screens/home/home.component';
 import { SobreComponent } from './screens/sobre/sobre.component';
-import { HttpClientModule } from '@angular/common/http';
-import { PokemonDetalhesComponent } from './screens/pokemon-detalhes/pokemon-detalhes.component';
+import { DetalharPokemonComponent } from './screens/detalhar-pokemon/detalhar-pokemon.component';
+import {HttpClientModule} from "@angular/common/http"
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { PokemonDetalhesComponent } from './screens/pokemon-detalhes/pokemon-det
     FooterComponent,
     HomeComponent,
     SobreComponent,
-    PokemonDetalhesComponent
+    DetalharPokemonComponent
   ],
   imports: [
     BrowserModule,

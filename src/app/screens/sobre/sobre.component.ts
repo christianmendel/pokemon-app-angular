@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sobre-screen',
+  selector: 'app-sobre',
   templateUrl: './sobre.component.html',
   styleUrls: ['./sobre.component.css']
 })
